@@ -1,9 +1,18 @@
 from django.db import models
 
 # Create your models here.
-class Image(models.Model):
+class CarouselHome(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='users/%Y/%m/%d/', blank=True)
+    cover = models.ImageField(upload_to='carousel_home/', blank=True)
+
+    def __str__(self):
+        return self.title
+
+class NewsHome1(models.Model):
+    title = models.CharField(max_length=100)
+    picture = models.ImageField(upload_to='news_home/', blank=True)
+    content = models.TextField(max_length=500)
+    date = models.DateField()
 
     def __str__(self):
         return self.title

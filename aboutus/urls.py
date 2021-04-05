@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
+from .views import HomePageView
 
 urlpatterns = [
-    path('', views.home, name="home"),
+    path('', HomePageView.as_view(), name="home"),
     path('aboutus/', views.aboutus, name="aboutus"),
     path('infrastructure', views.infrastructure, name="infrastructure"),
     path('admission', views.admission, name="admission"),

@@ -1,12 +1,25 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
-from .forms import ImageForm
+from django.conf import settings
+import os
+from django.views.generic import ListView
+from .models import CarouselHome
+from .models import NewsHome1
+
 # Create your views here.
+
+class HomePageView(ListView):
+    model = CarouselHome
+    template_name = 'home.html'
+
+
+
 def home(request):
     return render(request, "home.html")
 
 def aboutus(request):
-    return render(request, "aboutus.html")
+    return render(request, 'aboutus.html')
+    
 
 def infrastructure(request):
     return render(request, "infrastructure.html")
