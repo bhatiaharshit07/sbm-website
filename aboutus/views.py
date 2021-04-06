@@ -9,9 +9,15 @@ from .models import NewsHome
 # Create your views here.
 
 class HomePageView(ListView):
-    model = CarouselHome
+    context_object_name = 'carousel_list'
     template_name = 'home.html'
+    queryset = CarouselHome.objects.all()
 
+    def get_context_data(self, **kwargs):
+        context = super(HomePageView, self).get_context_data(**kwargs)
+        context['news_list'] = NewsHome.objects.all()
+        context['my_url_home'] = "http://www.samskritisansthan.com"
+        return context
 
 
 def home(request):
