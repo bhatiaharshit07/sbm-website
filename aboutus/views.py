@@ -4,7 +4,7 @@ from django.conf import settings
 import os
 from django.views.generic import ListView
 from .models import CarouselHome
-from .models import NewsHome1
+from .models import NewsHome
 
 # Create your views here.
 

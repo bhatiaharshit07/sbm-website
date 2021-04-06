@@ -8,11 +8,11 @@ class CarouselHome(models.Model):
     def __str__(self):
         return self.title
 
-class NewsHome1(models.Model):
+class NewsHome(models.Model):
     title = models.CharField(max_length=100)
     picture = models.ImageField(upload_to='news_home/', blank=True)
     content = models.TextField(max_length=500)
-    date = models.DateField()
+    date = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.title
