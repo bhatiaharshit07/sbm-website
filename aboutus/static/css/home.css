@@ -4,7 +4,7 @@
 
 }
 .news{
-    margin: 10px 10px;
+    margin: 10px 30px;
 }
 a:link {
     color: aliceblue;
@@ -14,4 +14,11 @@ a:visited {
 }
 a:hover{
     text-decoration: underline;
+}
+.card-body{
+    background-color: #D9eff7;
+}
+.card-title{
+    color: #4741A6;
+    font-weight: bolder;
 }
