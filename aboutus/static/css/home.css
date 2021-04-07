@@ -1,0 +1,17 @@
+.links{
+    color: aliceblue;
+    padding: 5px 5px;
+
+}
+.news{
+    margin: 10px 10px;
+}
+a:link {
+    color: aliceblue;
+}
+a:visited {
+    color: aliceblue;
+}
+a:hover{
+    text-decoration: underline;
+}

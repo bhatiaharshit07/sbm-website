@@ -1,30 +1,20 @@
 {% extends 'base.html' %}
+
 {% load static %}
+
 {% block navbar %}        
   <a class="nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-
-
-  <a class="nav-link" href="{% url 'aboutus' %}">About Us</a> 
-
-
+  <a class="nav-link" href="{% url 'aboutus' %}">About</a> 
   <a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a>
-
-
   <a class="nav-link" href="{% url 'admission' %}">Admission</a>
-
-
   <a class="nav-link" href="{% url 'facilities' %}">Facilities</a>
-
-
   <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-
-
   <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
 {% endblock %} 
 
 {% block content %}
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade round" data-ride="carousel" style="margin-bottom: 16px;">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -53,24 +43,18 @@
 
 </div>
 
-<div style="font-family: 'Karla', sans-serif;">
-    <div class="alert alert-primary text-center" role="alert">
-        <a href="{{my_url_home}}">Run by Samarth Shiksha Samithi, Delhi under aegis of Vidya Bharti Akhil Bhartiya Shiksha Sansthan.</a>
-    </div>
-    <div>
-        <div class="alert alert-success text-center" role="alert" style="background-color: rgb(105, 243, 128); ">
-            RECOGNIZED UPTO CLASS X BY DIRECTORATE OF EDUCATION
-        </div>
-        <div class="alert alert-success text-center" role="alert" style="background-color: rgb(228, 66, 134); ">
-            Apply for Admission 
-            Admission
-        </div>
-    </div>
+<div class="round">
+  <div class="alert alert-success text-center " role="alert" style="background-color: #4741A6; color: aliceblue; ">
+    <a href="{{my_url_home}}" class="links">Run by Samarth Shiksha Samithi, Delhi under aegis of Vidya Bharti Akhil Bhartiya Shiksha Sansthan.</a>
+    <div style="margin: 8px;">RECOGNIZED UPTO CLASS X BY DIRECTORATE OF EDUCATION</div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvZx_MzYue5_-miKbvtEDdaTtTiLHdEZAqzdy3NsCknn7SkQ/viewform" class="btn btn-warning btn-lg" tabindex="-1" role="button" aria-disabled="true">Apply for Admission</a>
+  </div>
 </div>
-<div class="card-group">
+
+<div class="card-group round">
   {% for news in news_list %}
-  <div class="card text-dark bg-info mb-3">
-    <img class="card-img-top" src="{{news.picture.url}}" alt="{{news.title}}">
+  <div class="card text-dark bg-light mb-3 news">
+    <img class="card-img-top" src="{{news.picture.url}}" alt="{{news.title}}" height="300">
     <div class="card-body">
       <h5 class="card-title">{{news.title}}</h5>
       <p class="card-text">{{news.content}}</p>
