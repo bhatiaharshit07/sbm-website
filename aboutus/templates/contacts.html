@@ -1,4 +1,27 @@
 {% extends 'base.html' %}
+
+{% block navbar %}        
+  <a class="nav-link " href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+
+
+  <a class="nav-link " href="{% url 'aboutus' %}">About Us</a> 
+
+
+  <a class="nav-link" href="{% url 'infrastructure' %}">Infrastructure</a>
+
+
+  <a class="nav-link " href="{% url 'admission' %}">Admission</a>
+
+
+  <a class="nav-link" href="{% url 'facilities' %}">Facilities</a>
+
+
+  <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+
+
+  <a class="nav-link active" href="{% url 'contacts' %}">Contacts</a>
+{% endblock %}
+
 {% block content %}
 <h1>About Us</h1>
 
