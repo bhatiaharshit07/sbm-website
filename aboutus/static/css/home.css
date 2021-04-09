@@ -22,6 +22,7 @@ a:hover{
     color: #4741A6;
     font-weight: bolder;
 }
-img{
-    height: 128px;
+.img-carousel{
+    height: 500px;
+    width: auto;
 }
